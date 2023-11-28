@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <title>Vard padidinimas</title>
+</head>
+<style>
+    *{
+    margin: 5px;
+    padding: 5px;
+}
+#vardas {
+    cursor: pointer;
+    text-align: left; 
+    font-size: 60px; 
+}  
+</style>
+
+<body>
+
+    <h1 id="vardas">INA</h1>
+
+<script>
+    const vardasElementas = document.getElementById('vardas');let paspaudimas = false;
+
+vardasElementas.addEventListener('click', function() {
+  if (!paspaudimas) {
+    vardasElementas.style.fontSize = '10em';
+    vardasElementas.style.color = 'red';
+    vardasElementas.style.position = 'fixed';
+    vardasElementas.style.top = '50%';
+    vardasElementas.style.left = '50%';
+    vardasElementas.style.transform = 'translate(-50%, -50%)';
+    paspaudimas = true;
+  } else {
+    vardasElementas.style.fontSize = '';
+    vardasElementas.style.color = '';
+    vardasElementas.style.position = '';
+    vardasElementas.style.top = '';
+    vardasElementas.style.left = '';
+    vardasElementas.style.transform = '';
+    paspaudimas = false;
+  }
+});
+</script>
+</body>
+</html>
+
+
